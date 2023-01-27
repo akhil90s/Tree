@@ -6,17 +6,17 @@ public class Range_Sum_Of_BST {
 
 	public static void main(String[] args) {
 
-		TreeNode treeNode = new TreeNode(10);
-		treeNode.left = new TreeNode(5);
-		treeNode.right = new TreeNode(15);
-		treeNode.left.left = new TreeNode(3);
-		treeNode.left.right = new TreeNode(7);
-		treeNode.right.right = new TreeNode(18);
+		TreeNode node = new TreeNode(10);
+		node.left = new TreeNode(5);
+		node.right = new TreeNode(15);
+		node.left.left = new TreeNode(3);
+		node.left.right = new TreeNode(7);
+		node.right.right = new TreeNode(18);
 
-		int result_Iterative = rangeSumBST_Iterative(treeNode, 7, 15);
+		int result_Iterative = rangeSumBST_Iterative(node, 7, 15);
 		System.out.println(result_Iterative);
 		
-		int result_Recursive = rangeSumBST_Recursive(treeNode, 7, 15);
+		int result_Recursive = rangeSumBST_Recursive(node, 7, 15);
 		System.out.println(result_Recursive);
 
 	}
