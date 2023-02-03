@@ -18,7 +18,6 @@ public class Sum_Root_To_Leaf_Numbers {
 	}
 
 	public static int sumNumbers(TreeNode root) {
-
 		if (root == null) {
 			return 0;
 		}
