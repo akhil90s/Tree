@@ -48,7 +48,6 @@ public class Construct_Binary_Tree_From_Postorder_And_Inorder_Traversal {
 		inOrderTraversal(root.left);
 		System.out.print(root.value + " ");
 		inOrderTraversal(root.right);
-
 	}
 
 }
