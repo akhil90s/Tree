@@ -56,8 +56,8 @@ public class Binary_Tree_Pruning {
 	public static TreeNode pruneTree_Optimal(TreeNode root) {
 		if (root == null)
 			return root;
-		pruneTree_Optimal(root.left);
-		pruneTree_Optimal(root.right);
+		root.left = pruneTree_Optimal(root.left);
+		root.right = pruneTree_Optimal(root.right);
 		if (root.val == 0 && root.left == null && root.right == null) {
 			return null;
 		}
