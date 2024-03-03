@@ -34,7 +34,7 @@ public class Subtree_Of_Another_Tree {
 	private static boolean isSameTree(TreeNode root, TreeNode subRoot) {
 		if (root == null || subRoot == null)
 			return root == null && subRoot == null;
-		else if (root.value == subRoot.value)
+		else if (root.val == subRoot.val)
 			return isSameTree(root.left, subRoot.left) && isSameTree(root.right, subRoot.right);
 		return false;
 	}

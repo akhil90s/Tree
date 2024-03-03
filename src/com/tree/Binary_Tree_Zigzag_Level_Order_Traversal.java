@@ -32,7 +32,7 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
 			List<Integer> l1 = new ArrayList<>();
 			while (!s1.isEmpty()) {
 				TreeNode node = s1.pop();
-				l1.add(node.value);
+				l1.add(node.val);
 				if (node.left != null)
 					s2.add(node.left);
 				if (node.right != null)
@@ -43,7 +43,7 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal {
 			List<Integer> l2 = new ArrayList<>();
 			while (!s2.isEmpty()) {
 				TreeNode node = s2.pop();
-				l2.add(node.value);
+				l2.add(node.val);
 				if (node.right != null)
 					s1.add(node.right);
 				if (node.left != null)

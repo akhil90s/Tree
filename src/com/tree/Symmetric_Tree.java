@@ -35,7 +35,7 @@ public class Symmetric_Tree {
 			return true;
 		if (p == null || q == null)
 			return false;
-		if (p.value != q.value)
+		if (p.val != q.val)
 			return false;
 		return isMirror(p.left, q.right) && isMirror(p.right, q.left);
 	}
@@ -53,7 +53,7 @@ public class Symmetric_Tree {
 				continue;
 			if (tLeft == null || tRight == null)
 				return false;
-			if (tLeft.value != tRight.value)
+			if (tLeft.val != tRight.val)
 				return false;
 			queue.add(tLeft.left);
 			queue.add(tRight.right);

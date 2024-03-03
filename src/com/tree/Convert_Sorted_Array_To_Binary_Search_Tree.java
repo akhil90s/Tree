@@ -5,7 +5,7 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
 	public static void main(String[] args) {
 		int[] array = new int[] { 1, 3, 5, 7, 9 };
 		TreeNode result = sortedArrayToBST(array);
-		System.out.println(result.value);
+		System.out.println(result.val);
 		inOrderTraversal(result);
 	}
 
@@ -29,7 +29,7 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
 		if (root == null)
 			return;
 		inOrderTraversal(root.left);
-		System.out.print(root.value + " ");
+		System.out.print(root.val + " ");
 		inOrderTraversal(root.right);
 	}
 

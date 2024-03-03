@@ -30,8 +30,8 @@ public class Path_Sum_I {
 		if (root == null && targetSum == 0)
 			return true;
 
-		return hasPathSum_Recursive(root.left, targetSum - root.value)
-				|| hasPathSum_Recursive(root.right, targetSum - root.value);
+		return hasPathSum_Recursive(root.left, targetSum - root.val)
+				|| hasPathSum_Recursive(root.right, targetSum - root.val);
 
 	}
 

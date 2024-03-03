@@ -27,7 +27,7 @@ public class Merge_Two_Binary_Tree {
 			return t2;
 		if (t2 == null)
 			return t1;
-		TreeNode sum = new TreeNode(t1.value + t2.value);
+		TreeNode sum = new TreeNode(t1.val + t2.val);
 		sum.left = mergeTrees(t1.left, t2.left);
 		sum.right = mergeTrees(t1.right, t2.right);
 		return sum;

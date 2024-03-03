@@ -30,13 +30,13 @@ public class Range_Sum_Of_BST {
 	
 	public static int helperMethod_Recursive(TreeNode root, int low, int high) {
 		if(root!=null) {
-			if(root.value >=low && root.value <=high) {
-				rangeSumBST_Recursive +=root.value;
+			if(root.val >=low && root.val <=high) {
+				rangeSumBST_Recursive +=root.val;
 			}
-			if(root.value >low) {
+			if(root.val >low) {
 				helperMethod_Recursive(root.left,low,high);
 			}
-			if(root.value <high) {
+			if(root.val <high) {
 				helperMethod_Recursive(root.right,low,high);
 			}
 		}
@@ -51,13 +51,13 @@ public class Range_Sum_Of_BST {
 		while (!stack.isEmpty()) {
 			TreeNode node = stack.pop();
 			if (node != null) {
-				if (node.value >= low && node.value <= high) {
-					rangeSumBST += node.value;
+				if (node.val >= low && node.val <= high) {
+					rangeSumBST += node.val;
 				}
-				if (node.value > low) {
+				if (node.val > low) {
 					stack.push(node.left);
 				}
-				if (node.value < high) {
+				if (node.val < high) {
 					stack.push(node.right);
 				}
 			}

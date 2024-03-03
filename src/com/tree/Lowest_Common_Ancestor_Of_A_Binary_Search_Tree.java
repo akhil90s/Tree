@@ -17,7 +17,7 @@ public class Lowest_Common_Ancestor_Of_A_Binary_Search_Tree {
 		node.left.right.left = new TreeNode(3);
 
 		TreeNode result = lowestCommonAncestor(node, node.left.left, node.left.right.left);
-		System.out.println(result.value);
+		System.out.println(result.val);
 
 	}
 
@@ -25,14 +25,13 @@ public class Lowest_Common_Ancestor_Of_A_Binary_Search_Tree {
 
 		if (root == null)
 			return null;
-
-		if (p.value < root.value && q.value < root.value) {
+		int curr = root.val;
+		if(p.val > curr && q.val > curr) {
+			return lowestCommonAncestor(root.right, p, q);
+		} else if (p.val < curr && q.val < curr) {
 			return lowestCommonAncestor(root.left, p, q);
-		} else if (p.value > root.value && q.value > root.value) {
-			return lowestCommonAncestor(root.left, p, q);
-		} else {
-			return root;
 		}
+		return root;
 	}
 
 }

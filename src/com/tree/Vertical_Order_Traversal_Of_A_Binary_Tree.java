@@ -37,7 +37,7 @@ public class Vertical_Order_Traversal_Of_A_Binary_Tree {
 		queue.offer(new Point(node, 0, 0));
 		Comparator<Point> comparator = (a, b) -> {
 			if (a.y == b.y) {
-				return a.node.value - b.node.value;
+				return a.node.val - b.node.val;
 			} else {
 				return a.y - b.y;
 			}
@@ -62,7 +62,7 @@ public class Vertical_Order_Traversal_Of_A_Binary_Tree {
 			PriorityQueue<Point> pq = map.get(i);
 			List<Integer> list = new ArrayList<>();
 			while (!pq.isEmpty()) {
-				list.add(pq.poll().node.value);
+				list.add(pq.poll().node.val);
 			}
 			result.add(list);
 		}

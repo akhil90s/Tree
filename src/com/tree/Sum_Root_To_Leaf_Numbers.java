@@ -30,7 +30,7 @@ public class Sum_Root_To_Leaf_Numbers {
 		if (root == null)
 			return;
 		number *= 10;
-		number += root.value;
+		number += root.val;
 		if(root.left == null && root.right == null)
 			numbers.add(number);
 		if(root.left != null)

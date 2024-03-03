@@ -35,7 +35,7 @@ public class Construct_Binary_Tree_From_Preorder_And_Inorder_Traversal {
 		TreeNode root = new TreeNode(preorder[preIndex++]);
 		if (start == end)
 			return root;
-		int index = map.get(root.value);
+		int index = map.get(root.val);
 		root.left = helperMethod(preorder, inorder, start, index - 1);
 		root.right = helperMethod(preorder, inorder, index + 1, end);
 		return root;
@@ -45,7 +45,7 @@ public class Construct_Binary_Tree_From_Preorder_And_Inorder_Traversal {
 		if (root == null)
 			return;
 		inOrderTraversal(root.left);
-		System.out.print(root.value + " ");
+		System.out.print(root.val + " ");
 		inOrderTraversal(root.right);
 	}
 

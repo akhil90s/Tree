@@ -65,7 +65,7 @@ public class Invert_A_Binary_Tree {
 			return;
 		}
 		inOrderTraversal(node.left);
-		System.out.print(node.value + " ");
+		System.out.print(node.val + " ");
 		inOrderTraversal(node.right);
 	}
 

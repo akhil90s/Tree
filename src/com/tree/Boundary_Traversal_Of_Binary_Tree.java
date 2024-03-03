@@ -31,7 +31,7 @@ public class Boundary_Traversal_Of_Binary_Tree {
 	public static List<Integer> boundaryLevelTraversal(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
 		if (!isLeafNode(root)) {
-			result.add(root.value);
+			result.add(root.val);
 		}
 		addLeftBoundary(root, result);
 		addLeavesNodes(root, result);
@@ -43,7 +43,7 @@ public class Boundary_Traversal_Of_Binary_Tree {
 		TreeNode curr = root.left;
 		while (curr != null) {
 			if (!isLeafNode(curr))
-				result.add(curr.value);
+				result.add(curr.val);
 			if (curr.left != null)
 				curr = curr.left;
 			else
@@ -57,7 +57,7 @@ public class Boundary_Traversal_Of_Binary_Tree {
 		List<Integer> list = new ArrayList<Integer>();
 		while (curr != null) {
 			if (!isLeafNode(curr)) {
-				list.add(curr.value);
+				list.add(curr.val);
 			}
 			if (curr.right != null) {
 				curr = curr.right;
@@ -73,7 +73,7 @@ public class Boundary_Traversal_Of_Binary_Tree {
 
 	private static void addLeavesNodes(TreeNode root, List<Integer> result) {
 		if (isLeafNode(root)) {
-			result.add(root.value);
+			result.add(root.val);
 			return;
 		}
 		if (root.left != null)

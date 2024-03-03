@@ -40,16 +40,16 @@ public class Path_Sum_II {
 		if (root == null)
 			return;
 		if (root.left == null && root.right == null) {
-			currentSum += root.value;
+			currentSum += root.val;
 			if (targetSum == currentSum) {
 				List<Integer> base = new ArrayList<>(list);
-				base.add(root.value);
+				base.add(root.val);
 				result.add(base);
 			}
 		}
-		list.add(root.value);
-		helperMethod(root.left, targetSum, currentSum + root.value, list, result);
-		helperMethod(root.right, targetSum, currentSum + root.value, list, result);
+		list.add(root.val);
+		helperMethod(root.left, targetSum, currentSum + root.val, list, result);
+		helperMethod(root.right, targetSum, currentSum + root.val, list, result);
 		list.remove(list.size() - 1);
 		return;
 	}

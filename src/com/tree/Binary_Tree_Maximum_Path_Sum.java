@@ -29,8 +29,8 @@ public class Binary_Tree_Maximum_Path_Sum {
 			return 0;
 		int left = Math.max(0, helperMethod(root.left, maxValue));
 		int right = Math.max(0, helperMethod(root.right, maxValue));
-		maxValue[0] = Math.max(maxValue[0], root.value + left + right);
-		return root.value + Math.max(left, right);
+		maxValue[0] = Math.max(maxValue[0], root.val + left + right);
+		return root.val + Math.max(left, right);
 	}
 
 }

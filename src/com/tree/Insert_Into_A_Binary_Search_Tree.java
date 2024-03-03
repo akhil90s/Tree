@@ -22,7 +22,7 @@ public class Insert_Into_A_Binary_Search_Tree {
 			return new TreeNode(val);
 		TreeNode curr = root;
 		while (true) {
-			if (curr.value <= val) {
+			if (curr.val <= val) {
 				if (curr.right != null) {
 					curr = curr.right;
 				} else {

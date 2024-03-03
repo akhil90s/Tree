@@ -45,7 +45,7 @@ public class Path_Sum_III {
 	private static void findPathSum_Approach1(TreeNode root, int currentSum, int targetSum) {
 		if (root == null)
 			return;
-		currentSum += root.value;
+		currentSum += root.val;
 		if (currentSum == targetSum)
 			total_Approach1++;
 		findPathSum_Approach1(root.left, currentSum, targetSum);
@@ -66,7 +66,7 @@ public class Path_Sum_III {
 	private static void findPathSum_Approach2(TreeNode root, int currentSum, int targetSum, Map<Integer, Integer> map) {
 		if(root == null)
 			return;
-		currentSum += root.value;
+		currentSum += root.val;
 		if(map.containsKey(currentSum - targetSum)) {
 			total_Approach2++;
 		}

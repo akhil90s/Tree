@@ -2,21 +2,21 @@ package com.tree;
 
 public class TreeNode {
 
-	int value;
+	int val;
 	TreeNode left;
 	TreeNode right;
 
 	public TreeNode() {
 	}
 
-	public TreeNode(int value) {
+	public TreeNode(int val) {
 		super();
-		this.value = value;
+		this.val = val;
 	}
 
-	public TreeNode(int value, TreeNode left, TreeNode right) {
+	public TreeNode(int val, TreeNode left, TreeNode right) {
 		super();
-		this.value = value;
+		this.val = val;
 		this.left = left;
 		this.right = right;
 	}

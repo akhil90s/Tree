@@ -36,7 +36,7 @@ public class Same_Tree {
 				continue;
 			if (p == null || q == null)
 				return false;
-			if (p.value != q.value)
+			if (p.val != q.val)
 				return false;
 			deque.add(p.left);
 			deque.add(q.left);
@@ -51,7 +51,7 @@ public class Same_Tree {
 			return true;
 		if (p == null || q == null)
 			return false;
-		if (p.value != q.value)
+		if (p.val != q.val)
 			return false;
 		return isSameTree_Recursive(p.left, q.left) && isSameTree_Recursive(p.right, q.right);
 	}

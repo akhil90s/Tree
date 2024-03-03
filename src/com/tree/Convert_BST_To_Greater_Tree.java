@@ -37,8 +37,8 @@ public class Convert_BST_To_Greater_Tree {
 			return root;
 
 		convertBST_Recursive(root.right);
-		sum_Recursive += root.value;
-		root.value = sum_Recursive;
+		sum_Recursive += root.val;
+		root.val = sum_Recursive;
 		convertBST_Recursive(root.left);
 		return root;
 	}
@@ -54,8 +54,8 @@ public class Convert_BST_To_Greater_Tree {
 				node = node.right;
 			}
 			node = stack.pop();
-			sum_Iterative += node.value;
-			node.value = sum_Iterative;
+			sum_Iterative += node.val;
+			node.val = sum_Iterative;
 			node = node.left;
 		}
 		return root;
